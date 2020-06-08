@@ -8,8 +8,8 @@ def Search_in_Data(keywordInData, pgname):
         print("Find" if recvCode.group(0)=='0' else "Not Found")
         print("------")
 if __name__=="__main__":
-    packagename = sys.argv[1]
-    keywordFile = open('name.txt', 'r')
+    packagename = sys.argv[2]
+    keywordFile = open(sys.argv[1], 'r')
     for keyword in keywordFile.readlines():
         print("---use plaintext to search---\n")
         Search_in_Data(keyword[:-1], packagename)
