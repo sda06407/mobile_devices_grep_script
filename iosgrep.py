@@ -27,4 +27,4 @@ if __name__=="__main__":
         print("---use binary to search---\n")
         Search_in_Data((' '.join(format(ord(x), 'b')for x in keyword[:-1]).replace(' ','\s')), packagename)
         print("---use unicode to search---")
-        Search_in_Data(repr(keyword[:-1].decode("utf-8")).replace("u", "", 1).replace("'", ""), packagename)
+        Search_in_Data(repr(keyword[:-1].encode("utf-8")).replace("b", "", 1).replace("'", ""), packagename)
